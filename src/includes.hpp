@@ -1,0 +1,30 @@
+#ifndef CS2_PROJECT_INCLUDES_HPP
+#define CS2_PROJECT_INCLUDES_HPP
+
+#include <windows.h>
+#include <cstdint>
+#include <cstdio>
+#include <dxgi.h>
+#include <d3d11.h>
+#include <string>
+#include <spdlog/spdlog.h>
+#include <minhook/minhook.h>
+#include "utils/xorstr.hpp"
+#include "utils/padding.hpp"
+#include "utils/console/console.hpp"
+#include "utils/fnv1a.hpp"
+#include "utils/winapi/ntapi.hpp"
+#include "utils/winapi/winapi.hpp"
+#include "utils/signature.hpp"
+#include "utils/utils.hpp"
+#include "sdk/client.hpp"
+#include "sdk/global_vars_base.hpp"
+#include "sdk/render_system.hpp"
+#include "sdk/cheat.hpp"
+#include "hooks/detour.hpp"
+#include "hooks/present/present.hpp"
+#include "hooks/frame_stage_notify/frame_stage_notify.hpp"
+#include "hooks/create_move/create_move.hpp"
+#include "hooks/hooks.hpp"
+
+#endif //CS2_PROJECT_INCLUDES_HPP
