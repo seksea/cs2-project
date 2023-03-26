@@ -1,5 +1,5 @@
-#ifndef CS2_PROJECT_NTAPI_HPP
-#define CS2_PROJECT_NTAPI_HPP
+#ifndef CS2_PROJECT_NT_HPP
+#define CS2_PROJECT_NT_HPP
 
 namespace ntapi
 {
@@ -302,4 +302,4 @@ namespace ntapi
     } LDR_DATA_TABLE_ENTRY, *PLDR_DATA_TABLE_ENTRY;
 }
 
-#endif //CS2_PROJECT_NTAPI_HPP
+#endif //CS2_PROJECT_NT_HPP

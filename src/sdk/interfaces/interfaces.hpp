@@ -1,13 +1,11 @@
-#ifndef CS2_PROJECT_CHEAT_HPP
-#define CS2_PROJECT_CHEAT_HPP
+#ifndef CS2_PROJECT_INTERFACES_HPP
+#define CS2_PROJECT_INTERFACES_HPP
 
-namespace cheat
+namespace interfaces
 {
     class impl {
     public:
         void init( );
-        void log( const char* fmt, ... );
-        void dump_interface_list( );
 
         template< typename T >
         T create_interface( const hash32_t& module_name, const hash32_t& interface_name );
@@ -20,6 +18,6 @@ namespace cheat
     };
 }
 
-inline cheat::impl g_cheat{ };
+inline interfaces::impl g_interfaces{ };
 
-#endif //CS2_PROJECT_CHEAT_HPP
+#endif //CS2_PROJECT_INTERFACES_HPP

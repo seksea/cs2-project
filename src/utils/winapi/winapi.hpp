@@ -8,8 +8,8 @@ namespace utils
         return reinterpret_cast< T >( __readgsqword( 0x60 ) );
     }
 
-    template<typename T>
-    T get_method(void *thisptr, uintptr_t idx);
+    template< typename T >
+    T get_method( void *thisptr, uintptr_t idx );
 }
 
 namespace winapi

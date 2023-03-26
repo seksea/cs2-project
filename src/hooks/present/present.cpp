@@ -7,6 +7,6 @@ HRESULT __stdcall hooks::present::hook( IDXGISwapChain* swap_chain, unsigned int
 
 void hooks::present::init( )
 {
-    m_hook.create_hook( utils::get_method< void* >( g_cheat.m_swap_chain, 8 ),
+    m_hook.create_hook( utils::get_method< void* >(g_interfaces.m_swap_chain, 8 ),
             reinterpret_cast< void* >( &hook ) );
 }

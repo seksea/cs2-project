@@ -3,7 +3,7 @@
 void __stdcall cheat_thread( )
 {
     g_console.init( );
-    g_cheat.init( );
+    g_interfaces.init( );
     g_hooks.init( );
 }
 

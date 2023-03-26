@@ -1,6 +1,6 @@
 #include "includes.hpp"
 
-void cheat::impl::init( )
+void interfaces::impl::init( )
 {
     m_globals       = utils::resolve_rip( signature::search( HASH( "client.dll" ), XOR( "48 8B 05 ? ? ? ? 4C 8D 0D ? ? ? ? F2 0F 11 74 24 ? 4C 8D 05 ? ? ? ? BA ? ? ? ? 8B" ) ).get( ), 3, 7 ).deref( ).get< sdk::c_global_vars_base * >( );
     m_render_system = utils::resolve_rip( signature::search( HASH( "rendersystemdx11.dll" ), XOR( "66 0F 7F 05 ? ? ? ? 66 0F 7F 0D ? ? ? ? 48 89 35 ? ? ? ?" ) ).get( ), 4, 8 ).deref( 2 ).get< sdk::c_render_system* >( );
@@ -18,7 +18,7 @@ struct interface_reg_t
 };
 
 template< typename T = void* >
-T cheat::impl::create_interface( const hash32_t& module_name, const hash32_t& interface_name )
+T interfaces::impl::create_interface(const hash32_t& module_name, const hash32_t& interface_name )
 {
     auto create_interface_fn = g_winapi.get_exported_function< __int64 ( __fastcall * ) ( const char *, DWORD * ) >( module_name, HASH( "CreateInterface" ) );
 
