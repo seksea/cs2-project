@@ -19,8 +19,9 @@ namespace interfaces
 
         // interfaces.
         sdk::c_render_system* m_render_system = nullptr;
-        sdk::c_client* m_client = nullptr;
         sdk::c_global_vars_base* m_globals = nullptr;
+        sdk::c_client* m_client = nullptr;
+        sdk::c_schema_system* m_schema_system = nullptr;
     };
 }
 

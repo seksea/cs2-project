@@ -3,10 +3,11 @@
 void interfaces::impl::init( )
 {
     // interfaces.
+    m_client        = create_interface< sdk::c_client* >( HASH( "client.dll" ), HASH( "Source2Client002" ) );
+    m_schema_system = create_interface< sdk::c_schema_system* >( HASH( "schemasystem.dll" ), HASH( "SchemaSystem_001" ) );
     m_globals       = utils::resolve_rip( signature::search( HASH( "client.dll" ), XOR( "48 8B 05 ? ? ? ? 4C 8D 0D ? ? ? ? F2 0F 11 74 24 ? 4C 8D 05 ? ? ? ? BA ? ? ? ? 8B" ) ).get( ), 3, 7 ).deref( ).get< sdk::c_global_vars_base * >( );
     m_render_system = utils::resolve_rip( signature::search( HASH( "rendersystemdx11.dll" ), XOR( "66 0F 7F 05 ? ? ? ? 66 0F 7F 0D ? ? ? ? 48 89 35 ? ? ? ?" ) ).get( ), 4, 8 ).deref( 2 ).get< sdk::c_render_system* >( );
     m_swap_chain    = m_render_system->m_swap_chain;
-    m_client        = create_interface< sdk::c_client* >( HASH( "client.dll" ), HASH( "Source2Client002" ) );
 }
 
 using interface_fn = void * ( __cdecl * )( );
