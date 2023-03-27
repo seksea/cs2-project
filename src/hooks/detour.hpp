@@ -13,7 +13,7 @@ namespace hook
         }
 
         template< typename T >
-        __forceinline T call_original()
+        __forceinline T call_original( )
         {
             return reinterpret_cast< T >( this->m_original );
         }
