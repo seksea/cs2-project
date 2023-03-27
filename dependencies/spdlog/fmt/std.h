@@ -16,7 +16,9 @@
 #                define FMT_HEADER_ONLY
 #            endif
 #        endif
+
 #        include <spdlog/fmt/bundled/std.h>
+
 #    else
 #        include <fmt/std.h>
 #    endif

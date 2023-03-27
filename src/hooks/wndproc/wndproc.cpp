@@ -5,7 +5,7 @@ extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler( HWND hWnd, UINT ms
 
 LRESULT __stdcall hooks::wndproc::hook( HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam )
 {
-    if ( ImGui_ImplWin32_WndProcHandler( hwnd, msg, wparam, lparam ) )
+    if ( ImGui_ImplWin32_WndProcHandler( hwnd, msg, wparam, lparam ))
         return true;
 
     return CallWindowProcA( m_hook_original, hwnd, msg, wparam, lparam );
@@ -14,5 +14,5 @@ LRESULT __stdcall hooks::wndproc::hook( HWND hwnd, UINT msg, WPARAM wparam, LPAR
 void hooks::wndproc::init( )
 {
     m_hook_original = reinterpret_cast< WNDPROC >( SetWindowLongPtrA( g_interfaces.m_window, GWLP_WNDPROC,
-            reinterpret_cast< LONG_PTR >( hook ) ) );
+                                                                      reinterpret_cast< LONG_PTR >( hook ) ) );
 }

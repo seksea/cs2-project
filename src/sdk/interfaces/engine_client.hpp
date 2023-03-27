@@ -5,8 +5,7 @@ namespace sdk
 {
     class c_engine_client {
     public:
-
     };
-}
+}// namespace sdk
 
-#endif //CS2_PROJECT_ENGINE_CLIENT_HPP
+#endif//CS2_PROJECT_ENGINE_CLIENT_HPP

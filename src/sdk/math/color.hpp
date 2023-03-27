@@ -8,7 +8,7 @@ namespace math
         __forceinline color( int r, int g, int b, int a = 255 ) : r( r ), g( g ), b( b ), a( a ) { }
         __forceinline color( ) : r( 0.f ), g( 0.f ), b( 0.f ), a( 255 ) { }
 
-        __forceinline color( color const& other, int a )
+        __forceinline color( color const &other, int a )
         {
             this->r = other.r;
             this->g = other.g;
@@ -18,6 +18,6 @@ namespace math
 
         unsigned char r, g, b, a;
     };
-}
+}// namespace math
 
-#endif //CS2_PROJECT_COLOR_HPP
+#endif//CS2_PROJECT_COLOR_HPP

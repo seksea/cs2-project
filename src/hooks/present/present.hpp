@@ -7,9 +7,10 @@ namespace hooks
     {
         inline hook::detour m_hook;
 
-        HRESULT __stdcall hook( IDXGISwapChain* swap_chain, unsigned int sync_interval, unsigned int flags );
-        void init( );
-    }
-}
+        HRESULT __stdcall hook( IDXGISwapChain *swap_chain, unsigned int sync_interval, unsigned int flags );
 
-#endif //CS2_PROJECT_PRESENT_HPP
+        void init( );
+    }// namespace present
+}// namespace hooks
+
+#endif//CS2_PROJECT_PRESENT_HPP

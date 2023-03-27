@@ -8,6 +8,6 @@ void console::impl::init( )
 
 void console::impl::shutdown( )
 {
-    fclose( reinterpret_cast< FILE* >( GetStdHandle( STD_OUTPUT_HANDLE ) ) );
+    fclose( reinterpret_cast< FILE * >( GetStdHandle( STD_OUTPUT_HANDLE ) ) );
     FreeConsole( );
 }

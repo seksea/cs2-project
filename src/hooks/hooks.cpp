@@ -6,9 +6,9 @@ void hooks::impl::init( )
 
     MH_Initialize( );
     {
+        hooks::present::init( );
         hooks::wndproc::init( );
         hooks::frame_stage_notify::init( );
-        hooks::present::init( );
         hooks::create_move::init( );
     }
     MH_EnableHook( MH_ALL_HOOKS );
