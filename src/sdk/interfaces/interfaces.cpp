@@ -34,7 +34,7 @@ T interfaces::impl::create_interface( const hash32_t& module_name, const hash32_
 
         auto callback = reinterpret_cast< T >( it->m_callback( ) );
 
-        spdlog::info( "interface: Found interface: {} at [{}]", it->m_name, reinterpret_cast< void* >( callback ) );
+        spdlog::info( "Found interface: {} at [{}]", it->m_name, reinterpret_cast< void* >( callback ) );
 
         return callback;
     }

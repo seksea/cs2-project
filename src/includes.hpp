@@ -22,7 +22,7 @@
 #include "utils/utils.hpp"
 #include "sdk/math/color.hpp"
 #include "sdk/tier0/tier0.hpp"
-#include "sdk/interfaces/clientdll.hpp"
+#include "sdk/interfaces/client.hpp"
 #include "sdk/interfaces/global_vars.hpp"
 #include "sdk/interfaces/render_system.hpp"
 #include "sdk/interfaces/interfaces.hpp"

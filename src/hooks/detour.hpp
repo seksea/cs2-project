@@ -10,9 +10,9 @@ namespace hook
             auto status = MH_CreateHook( address, function, &this->m_original );
 
             if ( status != MH_OK )
-                spdlog::error( "detour: Failed to create hook at address [{}] ({})", address, MH_StatusToString( status ) );
+                spdlog::error( "Failed to create hook at address [{}] ({})", address, MH_StatusToString( status ) );
 
-            spdlog::info( "detour: Hooked function {} at address [{}]", function, address );
+            spdlog::info( "Hooked function {} at address [{}]", function, address );
         }
 
         template< typename T >
