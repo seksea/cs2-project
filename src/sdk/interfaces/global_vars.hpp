@@ -1,5 +1,5 @@
-#ifndef CS2_PROJECT_GLOBAL_VARS_BASE_HPP
-#define CS2_PROJECT_GLOBAL_VARS_BASE_HPP
+#ifndef CS2_PROJECT_GLOBAL_VARS_HPP
+#define CS2_PROJECT_GLOBAL_VARS_HPP
 
 namespace sdk
 {
@@ -15,4 +15,4 @@ namespace sdk
     static_assert( sizeof( c_global_vars_base ) == 0x1038, "class c_global_vars_base has wrong size." );
 }
 
-#endif //CS2_PROJECT_GLOBAL_VARS_BASE_HPP
+#endif //CS2_PROJECT_GLOBAL_VARS_HPP

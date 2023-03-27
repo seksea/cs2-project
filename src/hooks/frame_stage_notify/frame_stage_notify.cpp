@@ -4,7 +4,7 @@ void __fastcall hooks::frame_stage_notify::hook( void* ecx, int a1 )
 {
     m_hook.call_original< decltype( &hook ) >( )( ecx, a1 );
 
-    int stage = a1 - 1;
+    int stage = a1 - 1; // stages go up to 8.
 }
 
 void hooks::frame_stage_notify::init( )

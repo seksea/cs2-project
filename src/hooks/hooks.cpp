@@ -2,14 +2,14 @@
 
 void hooks::impl::init( )
 {
-    MH_Initialize( );
+    g_interfaces.m_window = FindWindowA( XOR( "SDL_app" ), nullptr );
 
-    // init hooks.
+    MH_Initialize( );
     {
+        hooks::wndproc::init( );
         hooks::frame_stage_notify::init( );
         hooks::present::init( );
         hooks::create_move::init( );
     }
-
     MH_EnableHook( MH_ALL_HOOKS );
 }
