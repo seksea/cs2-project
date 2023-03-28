@@ -15,7 +15,7 @@ void schema::impl::init( )
 
         auto classes = schema_class->get_classes( );
 
-        for ( const auto class_binding: classes.GetElements( ) ) {
+        for ( const auto class_binding : classes.GetElements( ) ) {
             auto client_class_info = schema_class->find_type_declared_class( class_binding->m_binary_name );
 
             if ( !client_class_info )

@@ -29,6 +29,7 @@ HRESULT __stdcall hooks::present::hook( IDXGISwapChain *swap_chain, unsigned int
     ImGui_ImplWin32_NewFrame( );
     ImGui::NewFrame( );
 
+    g_visuals.run( );
     g_menu.render( );
     ImGui::Render( );
 

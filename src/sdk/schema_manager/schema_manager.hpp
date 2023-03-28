@@ -5,13 +5,12 @@
 __forceinline type& function( ) \
 { \
     const auto offset = g_schema.get_schema_offset( HASH( class ), HASH( prop ) );  \
-    *reinterpret_cast< type* >( reinterpret_cast< uintptr_t >( this ) + offset ); \
+    return *reinterpret_cast< type* >( reinterpret_cast< uintptr_t >( this ) + offset ); \
 } \
 
 namespace schema
 {
-    struct schema_offset_t
-    {
+    struct schema_offset_t {
         hash32_t m_class;
         hash32_t m_prop;
         short m_offset;
@@ -22,8 +21,7 @@ namespace schema
     class impl {
     public:
         short get_schema_offset( const hash32_t& class_hash, const hash32_t& prop_hash );
-
-        void init( );
+        void  init( );
     };
 }// namespace schema_manager
 

@@ -7,6 +7,8 @@ namespace hooks
     {
         inline hook::detour m_hook;
 
+        bool __fastcall hook( void* ecx, int a2, unsigned __int8 a3 );
+
         void init( );
     }// namespace create_move
 }// namespace hooks
