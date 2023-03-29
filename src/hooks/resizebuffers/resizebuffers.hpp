@@ -9,7 +9,7 @@ namespace hooks
 
         HRESULT __stdcall hook( IDXGISwapChain *swap_chain, unsigned int buffer, unsigned int w, unsigned int h, DXGI_FORMAT format, unsigned int flags );
 
-        void init();
+        void init( );
     }// namespace resizebuffers
 }// namespace hooks
 
