@@ -44,6 +44,7 @@
 #include "menu/menu.hpp"
 #include "features/features.hpp"
 #include "hooks/present/present.hpp"
+#include "hooks/resizebuffers/resizebuffers.hpp"
 #include "hooks/wndproc/wndproc.hpp"
 #include "hooks/level_init/level_init.hpp"
 #include "hooks/frame_stage_notify/frame_stage_notify.hpp"

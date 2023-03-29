@@ -6,7 +6,8 @@ void hooks::impl::init( )
 
     MH_Initialize( );
     {
-        hooks::present::init( );
+        hooks::present::init();
+        hooks::resizebuffers::init();
         hooks::wndproc::init( );
         hooks::level_init::init( );
         hooks::frame_stage_notify::init( );
