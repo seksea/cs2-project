@@ -12,6 +12,10 @@ namespace math
         float y{ };
     };
 
+    struct vec4_t {
+        float x, y, z, w;
+    };
+
     class vec3_t {
     public:
         vec3_t( ) = default;

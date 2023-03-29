@@ -3,14 +3,17 @@
 void interfaces::impl::init( )
 {
     // interfaces.
+    m_global_vars        = utils::resolve_rip( signature::search( HASH( "client.dll" ), XOR( "48 8B 05 ? ? ? ? 48 8B D8 80 78 3D 00 75 1D 80 78 3C 00 75" ) ).get( ), 3, 7 ).deref( ).get< sdk::c_global_vars_base * >( );
     m_csgo_input         = utils::resolve_rip( signature::search( HASH( "engine2.dll" ), XOR( "48 8B 0D ? ? ? ? 4C 8D 4D F8 0F 11 7D F8 44 8B C3 33 D2 44 0F 11 45" ) ).get( ), 3, 7 ).deref( ).get< sdk::c_csgo_input * >( );
     m_game_entity_system = utils::resolve_rip( signature::search( HASH( "client.dll" ), XOR( "48 8B 05 ? ? ? ? 48 8B 88 ? ? ? ? 48 85 C9 74 ? 48 8B 01 FF 50" ) ).get( ), 3, 7 ).deref( ).get< sdk::c_game_entity_system * >( );
-    m_global_vars        = utils::resolve_rip( signature::search( HASH( "client.dll" ), XOR( "48 8B 05 ? ? ? ? 4C 8D 0D ? ? ? ? F2 0F 11 74 24 ? 4C 8D 05 ? ? ? ? BA ? ? ? ? 8B" ) ).get( ), 3, 7 ).deref( ).get< sdk::c_global_vars_base * >( );
     m_render             = utils::resolve_rip( signature::search( HASH( "rendersystemdx11.dll" ), XOR( "66 0F 7F 05 ? ? ? ? 66 0F 7F 0D ? ? ? ? 48 89 35 ? ? ? ?" ) ).get( ), 4, 8 ).deref( 2 ).get< sdk::c_render * >( );
     m_swap_chain         = m_render->m_swap_chain;
     m_client             = create_interface< sdk::c_client * >( HASH( "client.dll" ), HASH( "Source2Client002" ) );
     m_schema_system      = create_interface< sdk::c_schema_system * >( HASH( "schemasystem.dll" ), HASH( "SchemaSystem_001" ) );
     m_engine_client      = create_interface< sdk::c_engine_client * >( HASH( "engine2.dll" ), HASH( "Source2EngineToClient001" ) );
+
+    // print global vars pointer
+    spdlog::info( "Global vars at [{}]", reinterpret_cast< void * >( m_global_vars ));
 }
 
 template< typename T = void * >

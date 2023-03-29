@@ -5,6 +5,7 @@ namespace visuals
 {
     class impl {
     public:
+        bool get_box_bounds( sdk::c_base_player_pawn *pawn, math::vec4_t &bbox );
         void run( );
     };
 }// namespace visuals

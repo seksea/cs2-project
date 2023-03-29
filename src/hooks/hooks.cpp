@@ -8,6 +8,7 @@ void hooks::impl::init( )
     {
         hooks::present::init( );
         hooks::wndproc::init( );
+        hooks::level_init::init( );
         hooks::frame_stage_notify::init( );
         hooks::create_move::init( );
     }

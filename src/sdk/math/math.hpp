@@ -3,6 +3,8 @@
 
 namespace math
 {
+    bool world_to_screen( math::vec3_t &origin, math::vec3_t &out );
+
     class impl {
     public:
         void init( );

@@ -19,6 +19,7 @@
 #include <imgui/imgui.h>
 #include "imgui/imgui_impl_win32.h"
 #include "imgui/imgui_impl_dx11.h"
+#include "imgui/imgui_internal.h"
 #include "utils/signature.hpp"
 #include "utils/utils.hpp"
 #include "sdk/math/color.hpp"
@@ -33,6 +34,7 @@
 #include "sdk/interfaces/schema_system.hpp"
 #include "sdk/interfaces/game_entity_system.hpp"
 #include "sdk/schema_manager/schema_manager.hpp"
+#include "utils/render/render.hpp"
 #include "sdk/tier0/tier0.hpp"
 #include "sdk/interfaces.hpp"
 #include "sdk/classes/collision_property.hpp"
@@ -43,6 +45,7 @@
 #include "features/features.hpp"
 #include "hooks/present/present.hpp"
 #include "hooks/wndproc/wndproc.hpp"
+#include "hooks/level_init/level_init.hpp"
 #include "hooks/frame_stage_notify/frame_stage_notify.hpp"
 #include "hooks/create_move/create_move.hpp"
 #include "hooks/hooks.hpp"

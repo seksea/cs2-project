@@ -2,9 +2,9 @@
 
 void schema::impl::init( )
 {
-    std::deque< const char * > schema_modules = { "client.dll",
-                                                  "engine2.dll",
-                                                  "schemasystem.dll"
+    std::deque< const char * > schema_modules = { XOR( "client.dll" ),
+                                                  XOR( "engine2.dll" ),
+                                                  XOR( "schemasystem.dll" )
     }; // not nessecary to hardcode module names.
 
     for ( auto & module : schema_modules ) {

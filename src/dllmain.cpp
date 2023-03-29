@@ -4,6 +4,7 @@ void __stdcall cheat_thread( )
 {
     g_console.init( );
     g_interfaces.init( );
+    g_render.init( );
     g_schema.init( );
     g_hooks.init( );
 }
