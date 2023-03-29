@@ -11,9 +11,6 @@ void interfaces::impl::init( )
     m_client             = create_interface< sdk::c_client * >( HASH( "client.dll" ), HASH( "Source2Client002" ) );
     m_schema_system      = create_interface< sdk::c_schema_system * >( HASH( "schemasystem.dll" ), HASH( "SchemaSystem_001" ) );
     m_engine_client      = create_interface< sdk::c_engine_client * >( HASH( "engine2.dll" ), HASH( "Source2EngineToClient001" ) );
-
-    // print global vars pointer
-    spdlog::info( "Global vars at [{}]", reinterpret_cast< void * >( m_global_vars ));
 }
 
 template< typename T = void * >
