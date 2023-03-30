@@ -13,7 +13,7 @@ HRESULT __stdcall hooks::present::hook( IDXGISwapChain *swap_chain, unsigned int
         swap_chain->GetBuffer( 0, __uuidof( ID3D11Texture2D ), reinterpret_cast< void ** >( &render_target_texture ));
 
         D3D11_RENDER_TARGET_VIEW_DESC desc{ };
-        memset( &desc, 0, sizeof( desc ));
+        memset( &desc, 0, sizeof( desc ) );
         desc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
         desc.ViewDimension = D3D11_RTV_DIMENSION_TEXTURE2DMS;
 
@@ -21,6 +21,7 @@ HRESULT __stdcall hooks::present::hook( IDXGISwapChain *swap_chain, unsigned int
         render_target_texture->Release( );
 
         g_menu.init( );
+        g_render.init( );
 
         init = true;
     }

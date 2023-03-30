@@ -146,7 +146,7 @@ namespace sdk
         __forceinline c_schema_system_type_scope *global_type_scope( )
         {
             using global_type_scope_t = c_schema_system_type_scope *( __thiscall * )( void * );
-            return utils::get_method< global_type_scope_t >( this, 13 )( this );
+            return utils::get_method< global_type_scope_t >( this, 11 )( this );
         }
 
         __forceinline c_schema_system_type_scope *find_type_scope_for_module( const char *module )

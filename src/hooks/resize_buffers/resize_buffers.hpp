@@ -1,16 +1,16 @@
-//
-// Created by neonm on 3/29/2023.
-//
-
 #ifndef CS2_PROJECT_RESIZE_BUFFERS_HPP
 #define CS2_PROJECT_RESIZE_BUFFERS_HPP
 
+namespace hooks
+{
+    namespace resize_buffers
+    {
+        inline hook::detour m_hook;
 
+        HRESULT __stdcall hook( IDXGISwapChain* swap_chain, unsigned int buffer_count, unsigned int width, unsigned int height, DXGI_FORMAT new_format, unsigned int swap_chain_flags );
 
-class resize_buffers {
+        void init( );
+    }
+}
 
-};
-
-
-
-#endif //CS2_PROJECT_RESIZE_BUFFERS_HPP
+#endif//CS2_PROJECT_RESIZE_BUFFERS_HPP
