@@ -8,6 +8,7 @@ namespace hooks
     class impl {
     public:
         void init( );
+        void shutdown( );
     };
 }// namespace hooks
 

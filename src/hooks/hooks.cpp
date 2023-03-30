@@ -6,6 +6,7 @@ void hooks::impl::init( )
 
     MH_Initialize( );
     {
+        hooks::resize_buffers::init( );
         hooks::present::init( );
         hooks::resizebuffers::init( );
         hooks::wndproc::init( );
@@ -14,4 +15,14 @@ void hooks::impl::init( )
         hooks::create_move::init( );
     }
     MH_EnableHook( MH_ALL_HOOKS );
+}
+
+void hooks::impl::shutdown( )
+{
+    // TODO: Fix crash on shutdown
+    hooks::wndproc::shutdown( );
+
+    MH_DisableHook( MH_ALL_HOOKS );
+    MH_RemoveHook( MH_ALL_HOOKS );
+    MH_Uninitialize( );
 }

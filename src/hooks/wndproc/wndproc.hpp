@@ -9,6 +9,7 @@ namespace hooks
 
         LRESULT __stdcall hook( HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam );
 
+        void shutdown( );
         void init( );
     }// namespace wndproc
 }// namespace hooks

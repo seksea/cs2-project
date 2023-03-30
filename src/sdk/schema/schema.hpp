@@ -23,7 +23,7 @@ namespace schema
         short get_schema_offset( const hash32_t& class_hash, const hash32_t& prop_hash );
         void  init( );
     };
-}// namespace schema_manager
+}// namespace schema
 
 inline schema::impl g_schema{ };
 

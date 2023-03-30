@@ -2,7 +2,6 @@
 
 __int64 __fastcall hooks::level_init::hook( void* ecx, __int64 a2 )
 {
-    // idk whats going on here, but it works.
     g_interfaces.m_global_vars = utils::resolve_rip( signature::search( HASH( "client.dll" ), XOR( "48 8B 05 ? ? ? ? 48 8B D8 80 78 3D 00 75 1D 80 78 3C 00 75" ) ).get( ), 3, 7 ).deref( ).get< sdk::c_global_vars_base * >( );
 
     return m_hook.call_original< decltype( &hook ) >( )( ecx, a2 );
