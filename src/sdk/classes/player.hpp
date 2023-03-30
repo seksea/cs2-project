@@ -10,6 +10,8 @@ namespace sdk
 
     class c_base_player_pawn_base {
     public:
+        SCHEMA( flags_t, flags, "C_BaseEntity", "m_fFlags" )
+        SCHEMA( movetype_t, move_type, "C_BaseEntity", "m_MoveType" )
         SCHEMA( c_game_scene_node*, game_scene_node, "C_BaseEntity", "m_pGameSceneNode" )
     };
 
