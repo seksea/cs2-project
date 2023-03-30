@@ -4,8 +4,6 @@ bool __fastcall hooks::create_move::hook( void *ecx, int slot, unsigned __int8 a
 {
     auto cmd = globals::cmd = g_interfaces.m_csgo_input->get_user_cmd( slot );
 
-
-
     return m_hook.call_original< decltype( &hook ) >( )( ecx, slot, a3 );
 }
 
